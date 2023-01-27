@@ -30,7 +30,7 @@ namespace WindowsFormsApp1
             string FilterString = "";
             if (фильтр1ToolStripMenuItem.Checked)
             {
-                FilterString += " AND " + dataGridView1.Columns[0].DataPropertyName + " LIKE'Буквы%'";
+                FilterString += " AND " + dataGridView1.Columns[0].DataPropertyName + " LIKE'А%'";
             }
             if (фильтр2ToolStripMenuItem.Checked)
             {
