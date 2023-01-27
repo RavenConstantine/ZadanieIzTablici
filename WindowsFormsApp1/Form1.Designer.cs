@@ -32,8 +32,6 @@ namespace WindowsFormsApp1
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.view1BindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.geografiaDataSet = new WindowsFormsApp1.GeografiaDataSet();
             this.bindingNavigator1 = new System.Windows.Forms.BindingNavigator(this.components);
             this.bindingNavigatorSeparator2 = new System.Windows.Forms.ToolStripSeparator();
             this.toolStripDropDownButton1 = new System.Windows.Forms.ToolStripDropDownButton();
@@ -42,15 +40,18 @@ namespace WindowsFormsApp1
             this.фильтр3ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.вСЕToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.уБРАТЬФИЛЬРЫToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.view_1TableAdapter = new WindowsFormsApp1.GeografiaDataSetTableAdapters.View_1TableAdapter();
-            this.nameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.nAMENACDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.cislenostDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.microsoft_Access_База_данныхDataSet = new WindowsFormsApp1.Microsoft_Access_База_данныхDataSet();
+            this.таблица1BindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.таблица1TableAdapter = new WindowsFormsApp1.Microsoft_Access_База_данныхDataSetTableAdapters.Таблица1TableAdapter();
+            this.кодDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.букваDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.цифраDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.словоDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.view1BindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.geografiaDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bindingNavigator1)).BeginInit();
             this.bindingNavigator1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.microsoft_Access_База_данныхDataSet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.таблица1BindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // dataGridView1
@@ -58,25 +59,16 @@ namespace WindowsFormsApp1
             this.dataGridView1.AutoGenerateColumns = false;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.nameDataGridViewTextBoxColumn,
-            this.nAMENACDataGridViewTextBoxColumn,
-            this.cislenostDataGridViewTextBoxColumn});
-            this.dataGridView1.DataSource = this.view1BindingSource;
+            this.кодDataGridViewTextBoxColumn,
+            this.букваDataGridViewTextBoxColumn,
+            this.цифраDataGridViewTextBoxColumn,
+            this.словоDataGridViewTextBoxColumn});
+            this.dataGridView1.DataSource = this.таблица1BindingSource;
             this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.dataGridView1.Location = new System.Drawing.Point(0, 28);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.Size = new System.Drawing.Size(506, 285);
             this.dataGridView1.TabIndex = 0;
-            // 
-            // view1BindingSource
-            // 
-            this.view1BindingSource.DataMember = "View_1";
-            this.view1BindingSource.DataSource = this.geografiaDataSet;
-            // 
-            // geografiaDataSet
-            // 
-            this.geografiaDataSet.DataSetName = "GeografiaDataSet";
-            this.geografiaDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // bindingNavigator1
             // 
@@ -159,27 +151,43 @@ namespace WindowsFormsApp1
             this.уБРАТЬФИЛЬРЫToolStripMenuItem.Text = "УБРАТЬ ФИЛЬРЫ";
             this.уБРАТЬФИЛЬРЫToolStripMenuItem.CheckedChanged += new System.EventHandler(this.фильтр1ToolStripMenuItem_CheckedChanged);
             // 
-            // view_1TableAdapter
+            // microsoft_Access_База_данныхDataSet
             // 
-            this.view_1TableAdapter.ClearBeforeFill = true;
+            this.microsoft_Access_База_данныхDataSet.DataSetName = "Microsoft_Access_База_данныхDataSet";
+            this.microsoft_Access_База_данныхDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
-            // nameDataGridViewTextBoxColumn
+            // таблица1BindingSource
             // 
-            this.nameDataGridViewTextBoxColumn.DataPropertyName = "Name";
-            this.nameDataGridViewTextBoxColumn.HeaderText = "Буква";
-            this.nameDataGridViewTextBoxColumn.Name = "nameDataGridViewTextBoxColumn";
+            this.таблица1BindingSource.DataMember = "Таблица1";
+            this.таблица1BindingSource.DataSource = this.microsoft_Access_База_данныхDataSet;
             // 
-            // nAMENACDataGridViewTextBoxColumn
+            // таблица1TableAdapter
             // 
-            this.nAMENACDataGridViewTextBoxColumn.DataPropertyName = "NAME_NAC";
-            this.nAMENACDataGridViewTextBoxColumn.HeaderText = "Слово";
-            this.nAMENACDataGridViewTextBoxColumn.Name = "nAMENACDataGridViewTextBoxColumn";
+            this.таблица1TableAdapter.ClearBeforeFill = true;
             // 
-            // cislenostDataGridViewTextBoxColumn
+            // кодDataGridViewTextBoxColumn
             // 
-            this.cislenostDataGridViewTextBoxColumn.DataPropertyName = "Cislenost";
-            this.cislenostDataGridViewTextBoxColumn.HeaderText = "Число";
-            this.cislenostDataGridViewTextBoxColumn.Name = "cislenostDataGridViewTextBoxColumn";
+            this.кодDataGridViewTextBoxColumn.DataPropertyName = "Код";
+            this.кодDataGridViewTextBoxColumn.HeaderText = "Код";
+            this.кодDataGridViewTextBoxColumn.Name = "кодDataGridViewTextBoxColumn";
+            // 
+            // букваDataGridViewTextBoxColumn
+            // 
+            this.букваDataGridViewTextBoxColumn.DataPropertyName = "Буква";
+            this.букваDataGridViewTextBoxColumn.HeaderText = "Буква";
+            this.букваDataGridViewTextBoxColumn.Name = "букваDataGridViewTextBoxColumn";
+            // 
+            // цифраDataGridViewTextBoxColumn
+            // 
+            this.цифраDataGridViewTextBoxColumn.DataPropertyName = "Цифра";
+            this.цифраDataGridViewTextBoxColumn.HeaderText = "Цифра";
+            this.цифраDataGridViewTextBoxColumn.Name = "цифраDataGridViewTextBoxColumn";
+            // 
+            // словоDataGridViewTextBoxColumn
+            // 
+            this.словоDataGridViewTextBoxColumn.DataPropertyName = "Слово";
+            this.словоDataGridViewTextBoxColumn.HeaderText = "Слово";
+            this.словоDataGridViewTextBoxColumn.Name = "словоDataGridViewTextBoxColumn";
             // 
             // Form1
             // 
@@ -192,11 +200,11 @@ namespace WindowsFormsApp1
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.Form1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.view1BindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.geografiaDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bindingNavigator1)).EndInit();
             this.bindingNavigator1.ResumeLayout(false);
             this.bindingNavigator1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.microsoft_Access_База_данныхDataSet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.таблица1BindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -210,14 +218,15 @@ namespace WindowsFormsApp1
         private System.Windows.Forms.ToolStripMenuItem фильтр1ToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem фильтр2ToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem фильтр3ToolStripMenuItem;
-        private GeografiaDataSet geografiaDataSet;
-        private System.Windows.Forms.BindingSource view1BindingSource;
-        private GeografiaDataSetTableAdapters.View_1TableAdapter view_1TableAdapter;
         private System.Windows.Forms.ToolStripMenuItem вСЕToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem уБРАТЬФИЛЬРЫToolStripMenuItem;
-        private System.Windows.Forms.DataGridViewTextBoxColumn nameDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn nAMENACDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn cislenostDataGridViewTextBoxColumn;
+        private Microsoft_Access_База_данныхDataSet microsoft_Access_База_данныхDataSet;
+        private System.Windows.Forms.BindingSource таблица1BindingSource;
+        private Microsoft_Access_База_данныхDataSetTableAdapters.Таблица1TableAdapter таблица1TableAdapter;
+        private System.Windows.Forms.DataGridViewTextBoxColumn кодDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn букваDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn цифраDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn словоDataGridViewTextBoxColumn;
     }
 }
 

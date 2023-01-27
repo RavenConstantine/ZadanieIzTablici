@@ -57,6 +57,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>GeografiaDataSet.xsd</DependentUpon>
     </Compile>
+    <Compile Include="Microsoft_Access_База_данныхDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Microsoft_Access_База_данныхDataSet.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Form1.resx">
@@ -82,6 +87,17 @@
     <None Include="GeografiaDataSet.xss">
       <DependentUpon>GeografiaDataSet.xsd</DependentUpon>
     </None>
+    <None Include="Microsoft_Access_База_данныхDataSet.xsc">
+      <DependentUpon>Microsoft_Access_База_данныхDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Microsoft_Access_База_данныхDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Microsoft_Access_База_данныхDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Microsoft_Access_База_данныхDataSet.xss">
+      <DependentUpon>Microsoft_Access_База_данныхDataSet.xsd</DependentUpon>
+    </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -94,6 +110,11 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Microsoft Access База данных.accdb">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

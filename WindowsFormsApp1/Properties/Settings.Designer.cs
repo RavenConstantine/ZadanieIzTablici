@@ -33,5 +33,16 @@ namespace WindowsFormsApp1.Properties {
                 return ((string)(this["GeografiaConnectionString"]));
             }
         }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
+        [global::System.Configuration.DefaultSettingValueAttribute("Provider=Microsoft.ACE.OLEDB.12.0;Data Source=\"|DataDirectory|\\Microsoft Access Б" +
+            "аза данных.accdb\"")]
+        public string Microsoft_Access_База_данныхConnectionString {
+            get {
+                return ((string)(this["Microsoft_Access_База_данныхConnectionString"]));
+            }
+        }
     }
 }
