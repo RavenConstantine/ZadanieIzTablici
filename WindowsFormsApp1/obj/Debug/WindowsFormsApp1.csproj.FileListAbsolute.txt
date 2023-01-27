@@ -8,3 +8,14 @@ C:\Users\Raven\source\repos\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.csproj.G
 C:\Users\Raven\source\repos\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.csproj.CoreCompileInputs.cache
 C:\Users\Raven\source\repos\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.exe
 C:\Users\Raven\source\repos\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.pdb
+C:\Users\Raven\Desktop\GitHub\ZadanieIzTablici\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.csproj.AssemblyReference.cache
+C:\Users\Raven\Desktop\GitHub\ZadanieIzTablici\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.Form1.resources
+C:\Users\Raven\Desktop\GitHub\ZadanieIzTablici\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.Properties.Resources.resources
+C:\Users\Raven\Desktop\GitHub\ZadanieIzTablici\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.csproj.GenerateResource.cache
+C:\Users\Raven\Desktop\GitHub\ZadanieIzTablici\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.csproj.CoreCompileInputs.cache
+C:\Users\Raven\Desktop\GitHub\ZadanieIzTablici\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.exe
+C:\Users\Raven\Desktop\GitHub\ZadanieIzTablici\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.pdb
+C:\Users\Raven\Desktop\GitHub\ZadanieIzTablici\WindowsFormsApp1\bin\Debug\Microsoft Access База данных.accdb
+C:\Users\Raven\Desktop\GitHub\ZadanieIzTablici\WindowsFormsApp1\bin\Debug\WindowsFormsApp1.exe.config
+C:\Users\Raven\Desktop\GitHub\ZadanieIzTablici\WindowsFormsApp1\bin\Debug\WindowsFormsApp1.exe
+C:\Users\Raven\Desktop\GitHub\ZadanieIzTablici\WindowsFormsApp1\bin\Debug\WindowsFormsApp1.pdb

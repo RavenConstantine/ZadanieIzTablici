@@ -21,10 +21,6 @@ namespace WindowsFormsApp1
         {
             // TODO: данная строка кода позволяет загрузить данные в таблицу "microsoft_Access_База_данныхDataSet.Таблица1". При необходимости она может быть перемещена или удалена.
             this.таблица1TableAdapter.Fill(this.microsoft_Access_База_данныхDataSet.Таблица1);
-            // TODO: данная строка кода позволяет загрузить данные в таблицу "microsoft_Access_База_данныхDataSet.Таблица1". При необходимости она может быть перемещена или удалена.
-            this.таблица1TableAdapter.Fill(this.microsoft_Access_База_данныхDataSet.Таблица1);
-            // TODO: данная строка кода позволяет загрузить данные в таблицу "geografiaDataSet.View_1". При необходимости она может быть перемещена или удалена.
-            this.view_1TableAdapter.Fill(this.geografiaDataSet.View_1);
 
         }
 
@@ -38,11 +34,11 @@ namespace WindowsFormsApp1
             }
             if (фильтр2ToolStripMenuItem.Checked)
             {
-                FilterString += " AND " + dataGridView1.Columns[2].DataPropertyName + " LIKE'Слово%'";
+                FilterString += " AND " + dataGridView1.Columns[3].DataPropertyName + " LIKE'Слово%'";
             }
             if (фильтр3ToolStripMenuItem.Checked)
             {
-                FilterString += " AND " + dataGridView1.Columns[3].DataPropertyName + " >= 200";
+                FilterString += " AND " + dataGridView1.Columns[2].DataPropertyName + " >= 200";
             }
             if (FilterString != "")
                 таблица1BindingSource.Filter = FilterString.Remove(0, 5);
