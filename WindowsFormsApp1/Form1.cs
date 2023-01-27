@@ -30,11 +30,11 @@ namespace WindowsFormsApp1
             string FilterString = "";
             if (фильтр1ToolStripMenuItem.Checked)
             {
-                FilterString += " AND " + dataGridView1.Columns[0].DataPropertyName + " LIKE'Оз%'";
+                FilterString += " AND " + dataGridView1.Columns[0].DataPropertyName + " LIKE'Буквы%'";
             }
             if (фильтр2ToolStripMenuItem.Checked)
             {
-                FilterString += " AND " + dataGridView1.Columns[1].DataPropertyName + " LIKE'Русские%'";
+                FilterString += " AND " + dataGridView1.Columns[1].DataPropertyName + " LIKE'Слово%'";
             }
             if (фильтр3ToolStripMenuItem.Checked)
             {
