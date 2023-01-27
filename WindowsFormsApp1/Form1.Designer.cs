@@ -41,13 +41,13 @@ namespace WindowsFormsApp1
             this.bindingNavigator1 = new System.Windows.Forms.BindingNavigator(this.components);
             this.bindingNavigatorSeparator2 = new System.Windows.Forms.ToolStripSeparator();
             this.toolStripDropDownButton1 = new System.Windows.Forms.ToolStripDropDownButton();
+            this.вСЕToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.фильтр1ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.фильтр2ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.фильтр3ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.вСЕToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.фильтр4ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.уБРАТЬФИЛЬРЫToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.таблица1TableAdapter = new WindowsFormsApp1.Microsoft_Access_База_данныхDataSetTableAdapters.Таблица1TableAdapter();
-            this.фильтр4ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.таблица1BindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.microsoft_Access_База_данныхDataSet)).BeginInit();
@@ -133,6 +133,7 @@ namespace WindowsFormsApp1
             // 
             // toolStripDropDownButton1
             // 
+            this.toolStripDropDownButton1.AutoToolTip = false;
             this.toolStripDropDownButton1.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
             this.toolStripDropDownButton1.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.вСЕToolStripMenuItem,
@@ -146,6 +147,14 @@ namespace WindowsFormsApp1
             this.toolStripDropDownButton1.Name = "toolStripDropDownButton1";
             this.toolStripDropDownButton1.Size = new System.Drawing.Size(70, 22);
             this.toolStripDropDownButton1.Text = "Фильтры";
+            // 
+            // вСЕToolStripMenuItem
+            // 
+            this.вСЕToolStripMenuItem.CheckOnClick = true;
+            this.вСЕToolStripMenuItem.Name = "вСЕToolStripMenuItem";
+            this.вСЕToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.вСЕToolStripMenuItem.Text = "ВСЕ";
+            this.вСЕToolStripMenuItem.CheckedChanged += new System.EventHandler(this.фильтр1ToolStripMenuItem_CheckedChanged);
             // 
             // фильтр1ToolStripMenuItem
             // 
@@ -171,13 +180,13 @@ namespace WindowsFormsApp1
             this.фильтр3ToolStripMenuItem.Text = "Фильтр 3";
             this.фильтр3ToolStripMenuItem.CheckedChanged += new System.EventHandler(this.фильтр1ToolStripMenuItem_CheckedChanged);
             // 
-            // вСЕToolStripMenuItem
+            // фильтр4ToolStripMenuItem
             // 
-            this.вСЕToolStripMenuItem.CheckOnClick = true;
-            this.вСЕToolStripMenuItem.Name = "вСЕToolStripMenuItem";
-            this.вСЕToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.вСЕToolStripMenuItem.Text = "ВСЕ";
-            this.вСЕToolStripMenuItem.CheckedChanged += new System.EventHandler(this.фильтр1ToolStripMenuItem_CheckedChanged);
+            this.фильтр4ToolStripMenuItem.CheckOnClick = true;
+            this.фильтр4ToolStripMenuItem.Name = "фильтр4ToolStripMenuItem";
+            this.фильтр4ToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.фильтр4ToolStripMenuItem.Text = "Фильтр 4";
+            this.фильтр4ToolStripMenuItem.CheckedChanged += new System.EventHandler(this.фильтр1ToolStripMenuItem_CheckedChanged);
             // 
             // уБРАТЬФИЛЬРЫToolStripMenuItem
             // 
@@ -190,14 +199,6 @@ namespace WindowsFormsApp1
             // таблица1TableAdapter
             // 
             this.таблица1TableAdapter.ClearBeforeFill = true;
-            // 
-            // фильтр4ToolStripMenuItem
-            // 
-            this.фильтр4ToolStripMenuItem.CheckOnClick = true;
-            this.фильтр4ToolStripMenuItem.Name = "фильтр4ToolStripMenuItem";
-            this.фильтр4ToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.фильтр4ToolStripMenuItem.Text = "Фильтр 4";
-            this.фильтр4ToolStripMenuItem.CheckedChanged += new System.EventHandler(this.фильтр1ToolStripMenuItem_CheckedChanged);
             // 
             // Form1
             // 

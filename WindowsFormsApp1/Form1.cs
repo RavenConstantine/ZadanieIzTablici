@@ -26,7 +26,6 @@ namespace WindowsFormsApp1
 
         private void фильтр1ToolStripMenuItem_CheckedChanged(object sender, EventArgs e)
         {
-            таблица1BindingSource.RemoveFilter();
             string FilterString = "";
             string [] FilterStrings = new string [4];
             int count = 0;
