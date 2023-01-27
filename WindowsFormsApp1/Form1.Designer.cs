@@ -32,6 +32,12 @@ namespace WindowsFormsApp1
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.кодDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.букваDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.цифраDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.словоDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.таблица1BindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.microsoft_Access_База_данныхDataSet = new WindowsFormsApp1.Microsoft_Access_База_данныхDataSet();
             this.bindingNavigator1 = new System.Windows.Forms.BindingNavigator(this.components);
             this.bindingNavigatorSeparator2 = new System.Windows.Forms.ToolStripSeparator();
             this.toolStripDropDownButton1 = new System.Windows.Forms.ToolStripDropDownButton();
@@ -40,18 +46,13 @@ namespace WindowsFormsApp1
             this.фильтр3ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.вСЕToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.уБРАТЬФИЛЬРЫToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.microsoft_Access_База_данныхDataSet = new WindowsFormsApp1.Microsoft_Access_База_данныхDataSet();
-            this.таблица1BindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.таблица1TableAdapter = new WindowsFormsApp1.Microsoft_Access_База_данныхDataSetTableAdapters.Таблица1TableAdapter();
-            this.кодDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.букваDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.цифраDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.словоDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.фильтр4ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.таблица1BindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.microsoft_Access_База_данныхDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bindingNavigator1)).BeginInit();
             this.bindingNavigator1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.microsoft_Access_База_данныхDataSet)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.таблица1BindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // dataGridView1
@@ -69,6 +70,40 @@ namespace WindowsFormsApp1
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.Size = new System.Drawing.Size(506, 285);
             this.dataGridView1.TabIndex = 0;
+            // 
+            // кодDataGridViewTextBoxColumn
+            // 
+            this.кодDataGridViewTextBoxColumn.DataPropertyName = "Код";
+            this.кодDataGridViewTextBoxColumn.HeaderText = "Код";
+            this.кодDataGridViewTextBoxColumn.Name = "кодDataGridViewTextBoxColumn";
+            // 
+            // букваDataGridViewTextBoxColumn
+            // 
+            this.букваDataGridViewTextBoxColumn.DataPropertyName = "Буква";
+            this.букваDataGridViewTextBoxColumn.HeaderText = "Буква";
+            this.букваDataGridViewTextBoxColumn.Name = "букваDataGridViewTextBoxColumn";
+            // 
+            // цифраDataGridViewTextBoxColumn
+            // 
+            this.цифраDataGridViewTextBoxColumn.DataPropertyName = "Цифра";
+            this.цифраDataGridViewTextBoxColumn.HeaderText = "Цифра";
+            this.цифраDataGridViewTextBoxColumn.Name = "цифраDataGridViewTextBoxColumn";
+            // 
+            // словоDataGridViewTextBoxColumn
+            // 
+            this.словоDataGridViewTextBoxColumn.DataPropertyName = "Слово";
+            this.словоDataGridViewTextBoxColumn.HeaderText = "Слово";
+            this.словоDataGridViewTextBoxColumn.Name = "словоDataGridViewTextBoxColumn";
+            // 
+            // таблица1BindingSource
+            // 
+            this.таблица1BindingSource.DataMember = "Таблица1";
+            this.таблица1BindingSource.DataSource = this.microsoft_Access_База_данныхDataSet;
+            // 
+            // microsoft_Access_База_данныхDataSet
+            // 
+            this.microsoft_Access_База_данныхDataSet.DataSetName = "Microsoft_Access_База_данныхDataSet";
+            this.microsoft_Access_База_данныхDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // bindingNavigator1
             // 
@@ -100,10 +135,11 @@ namespace WindowsFormsApp1
             // 
             this.toolStripDropDownButton1.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
             this.toolStripDropDownButton1.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.вСЕToolStripMenuItem,
             this.фильтр1ToolStripMenuItem,
             this.фильтр2ToolStripMenuItem,
             this.фильтр3ToolStripMenuItem,
-            this.вСЕToolStripMenuItem,
+            this.фильтр4ToolStripMenuItem,
             this.уБРАТЬФИЛЬРЫToolStripMenuItem});
             this.toolStripDropDownButton1.Image = ((System.Drawing.Image)(resources.GetObject("toolStripDropDownButton1.Image")));
             this.toolStripDropDownButton1.ImageTransparentColor = System.Drawing.Color.Magenta;
@@ -151,43 +187,17 @@ namespace WindowsFormsApp1
             this.уБРАТЬФИЛЬРЫToolStripMenuItem.Text = "УБРАТЬ ФИЛЬРЫ";
             this.уБРАТЬФИЛЬРЫToolStripMenuItem.CheckedChanged += new System.EventHandler(this.фильтр1ToolStripMenuItem_CheckedChanged);
             // 
-            // microsoft_Access_База_данныхDataSet
-            // 
-            this.microsoft_Access_База_данныхDataSet.DataSetName = "Microsoft_Access_База_данныхDataSet";
-            this.microsoft_Access_База_данныхDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // таблица1BindingSource
-            // 
-            this.таблица1BindingSource.DataMember = "Таблица1";
-            this.таблица1BindingSource.DataSource = this.microsoft_Access_База_данныхDataSet;
-            // 
             // таблица1TableAdapter
             // 
             this.таблица1TableAdapter.ClearBeforeFill = true;
             // 
-            // кодDataGridViewTextBoxColumn
+            // фильтр4ToolStripMenuItem
             // 
-            this.кодDataGridViewTextBoxColumn.DataPropertyName = "Код";
-            this.кодDataGridViewTextBoxColumn.HeaderText = "Код";
-            this.кодDataGridViewTextBoxColumn.Name = "кодDataGridViewTextBoxColumn";
-            // 
-            // букваDataGridViewTextBoxColumn
-            // 
-            this.букваDataGridViewTextBoxColumn.DataPropertyName = "Буква";
-            this.букваDataGridViewTextBoxColumn.HeaderText = "Буква";
-            this.букваDataGridViewTextBoxColumn.Name = "букваDataGridViewTextBoxColumn";
-            // 
-            // цифраDataGridViewTextBoxColumn
-            // 
-            this.цифраDataGridViewTextBoxColumn.DataPropertyName = "Цифра";
-            this.цифраDataGridViewTextBoxColumn.HeaderText = "Цифра";
-            this.цифраDataGridViewTextBoxColumn.Name = "цифраDataGridViewTextBoxColumn";
-            // 
-            // словоDataGridViewTextBoxColumn
-            // 
-            this.словоDataGridViewTextBoxColumn.DataPropertyName = "Слово";
-            this.словоDataGridViewTextBoxColumn.HeaderText = "Слово";
-            this.словоDataGridViewTextBoxColumn.Name = "словоDataGridViewTextBoxColumn";
+            this.фильтр4ToolStripMenuItem.CheckOnClick = true;
+            this.фильтр4ToolStripMenuItem.Name = "фильтр4ToolStripMenuItem";
+            this.фильтр4ToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.фильтр4ToolStripMenuItem.Text = "Фильтр 4";
+            this.фильтр4ToolStripMenuItem.CheckedChanged += new System.EventHandler(this.фильтр1ToolStripMenuItem_CheckedChanged);
             // 
             // Form1
             // 
@@ -200,11 +210,11 @@ namespace WindowsFormsApp1
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.Form1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.таблица1BindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.microsoft_Access_База_данныхDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bindingNavigator1)).EndInit();
             this.bindingNavigator1.ResumeLayout(false);
             this.bindingNavigator1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.microsoft_Access_База_данныхDataSet)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.таблица1BindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -227,6 +237,7 @@ namespace WindowsFormsApp1
         private System.Windows.Forms.DataGridViewTextBoxColumn букваDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn цифраDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn словоDataGridViewTextBoxColumn;
+        private System.Windows.Forms.ToolStripMenuItem фильтр4ToolStripMenuItem;
     }
 }
 

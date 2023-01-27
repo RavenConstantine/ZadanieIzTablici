@@ -52,11 +52,6 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
-    <Compile Include="GeografiaDataSet.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>GeografiaDataSet.xsd</DependentUpon>
-    </Compile>
     <Compile Include="Microsoft_Access_База_данныхDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -76,17 +71,6 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <None Include="GeografiaDataSet.xsc">
-      <DependentUpon>GeografiaDataSet.xsd</DependentUpon>
-    </None>
-    <None Include="GeografiaDataSet.xsd">
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>GeografiaDataSet.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="GeografiaDataSet.xss">
-      <DependentUpon>GeografiaDataSet.xsd</DependentUpon>
-    </None>
     <None Include="Microsoft_Access_База_данныхDataSet.xsc">
       <DependentUpon>Microsoft_Access_База_данныхDataSet.xsd</DependentUpon>
     </None>

@@ -28,20 +28,40 @@ namespace WindowsFormsApp1
         {
             таблица1BindingSource.RemoveFilter();
             string FilterString = "";
+            string [] FilterStrings = new string [4];
+            int count = 0;
             if (фильтр1ToolStripMenuItem.Checked)
             {
-                FilterString += " AND " + dataGridView1.Columns[1].DataPropertyName + " LIKE'А%'";
+                FilterStrings[count] = dataGridView1.Columns[1].DataPropertyName + " LIKE'А%'";
+                count++;
             }
             if (фильтр2ToolStripMenuItem.Checked)
             {
-                FilterString += " AND " + dataGridView1.Columns[3].DataPropertyName + " LIKE'Слово%'";
+                FilterStrings[count] = dataGridView1.Columns[3].DataPropertyName + " LIKE'Слово%'";
+                count++;
             }
-            if (фильтр3ToolStripMenuItem.Checked)
+            if (фильтр3ToolStripMenuItem.Checked || фильтр4ToolStripMenuItem.Checked)
             {
-                FilterString += " AND " + dataGridView1.Columns[2].DataPropertyName + " >= 200";
+                string[] MiniFilterStrings = new string[2];
+                int MiniCount = 0;
+                FilterStrings[count] += "(";
+                if (фильтр3ToolStripMenuItem.Checked)
+                {
+                    MiniFilterStrings[MiniCount] = dataGridView1.Columns[2].DataPropertyName + " >= 200";
+                    MiniCount++;
+                }
+                if (фильтр4ToolStripMenuItem.Checked)
+                {
+                    MiniFilterStrings[MiniCount] = dataGridView1.Columns[2].DataPropertyName + " < 200";
+                    MiniCount++;
+                }
+                FilterStrings[count] += String.Join(" OR ", MiniFilterStrings.Where(x => !string.IsNullOrWhiteSpace(x)));
+                FilterStrings[count] += ")";
+                count++;
             }
+            FilterString = String.Join(" AND ", FilterStrings.Where(x => !string.IsNullOrWhiteSpace(x)));
             if (FilterString != "")
-                таблица1BindingSource.Filter = FilterString.Remove(0, 5);
+                таблица1BindingSource.Filter = FilterString;
             else
                 таблица1BindingSource.RemoveFilter();
             if (вСЕToolStripMenuItem.Checked)
